@@ -1,17 +1,18 @@
 using System.Collections.Generic;
 using System.Linq;
+using _Project.Scripts.Views;
 
-namespace _Project.Scripts.Model
+namespace _Project.Scripts.Models
 {
     public abstract class Model
     {
-        protected View.View View;
+        protected View View;
         protected List<int> State;
         protected bool IsWin;
         
         public List<int> CurrentState => State;
 
-        public Model(View.View view)
+        public Model(View view)
         {
             View = view;
             State = new int[9].ToList();

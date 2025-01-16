@@ -1,13 +1,14 @@
 using System.Collections.Generic;
 using System.Linq;
+using _Project.Scripts.Models;
 
-namespace _Project.Scripts.Presenter
+namespace _Project.Scripts.Presenters
 {
     public abstract class Presenter
     {
-        protected Model.Model Model;
+        protected Model Model;
 
-        public Presenter(Model.Model model)
+        public Presenter(Model model)
         {
             Model = model;
         }
@@ -17,7 +18,7 @@ namespace _Project.Scripts.Presenter
             Spin();
         }
 
-        public void Spin()
+        private void Spin()
         {
             List<int> tempState = new int[Model.CurrentState.Count].ToList();
 
