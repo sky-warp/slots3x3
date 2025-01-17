@@ -131,7 +131,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 117644511}
-  - component: {fileID: 117644510}
+  - component: {fileID: 117644512}
   m_Layer: 0
   m_Name: EntryPoint
   m_TagString: Untagged
@@ -139,19 +139,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &117644510
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 117644509}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3fbad03aa4bb2204fa46db5412d51b81, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  uiView: {fileID: 6244936551478889259}
 --- !u!4 &117644511
 Transform:
   m_ObjectHideFlags: 0
@@ -167,6 +154,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &117644512
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 117644509}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f56a2ae9964d4ebf89d0c4c9cfb64acb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _uiSlotView: {fileID: 8303717172848456238}
 --- !u!1 &186597256
 GameObject:
   m_ObjectHideFlags: 0
@@ -1476,7 +1476,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8303717172848456237}
-  - component: {fileID: 6244936551478889259}
+  - component: {fileID: 8303717172848456238}
   m_Layer: 0
   m_Name: UIView
   m_TagString: Untagged
@@ -1693,37 +1693,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &6244936551478889259
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2379502103063884834}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d20266c03c6049c5954e0913a5fbb2bf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _slotValues:
-  - {fileID: 3741432852228388272}
-  - {fileID: 6333655314334462643}
-  - {fileID: 6333655315897132567}
-  - {fileID: 6333655315737945444}
-  - {fileID: 6333655315671464125}
-  - {fileID: 6333655314655577064}
-  - {fileID: 6333655315775340331}
-  - {fileID: 6333655314822619446}
-  - {fileID: 6333655314553607333}
-  _imagesByID:
-  - {fileID: 21300000, guid: a4f215e05fc7716429af219ae35c7b35, type: 3}
-  - {fileID: 21300000, guid: dece3df47286828438a446f00e9a9322, type: 3}
-  - {fileID: 21300000, guid: ac5cd3a967f676749a92617b38c5a2e3, type: 3}
-  - {fileID: 21300000, guid: fee37a5208fa3c34eb2180a28ff9ca81, type: 3}
-  - {fileID: 21300000, guid: d81cbeb8efd2823489ff040e8dea504f, type: 3}
-  - {fileID: 21300000, guid: a7dbb32a811d88742b9dcfc9003594a1, type: 3}
-  _winnerText: {fileID: 1862304272}
-  _spinButton: {fileID: 1587544296}
 --- !u!114 &6333655314334462643
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2195,6 +2164,37 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8303717172848456238
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2379502103063884834}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c55d5ae7bace45d5abd391803afc9433, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _slotsImages:
+  - {fileID: 3741432852228388272}
+  - {fileID: 6333655314334462643}
+  - {fileID: 6333655315897132567}
+  - {fileID: 6333655315737945444}
+  - {fileID: 6333655315671464125}
+  - {fileID: 6333655314655577064}
+  - {fileID: 6333655315775340331}
+  - {fileID: 6333655314822619446}
+  - {fileID: 6333655314553607333}
+  _slotsItems:
+  - {fileID: 21300000, guid: a4f215e05fc7716429af219ae35c7b35, type: 3}
+  - {fileID: 21300000, guid: dece3df47286828438a446f00e9a9322, type: 3}
+  - {fileID: 21300000, guid: ac5cd3a967f676749a92617b38c5a2e3, type: 3}
+  - {fileID: 21300000, guid: fee37a5208fa3c34eb2180a28ff9ca81, type: 3}
+  - {fileID: 21300000, guid: d81cbeb8efd2823489ff040e8dea504f, type: 3}
+  - {fileID: 21300000, guid: a7dbb32a811d88742b9dcfc9003594a1, type: 3}
+  _spinButton: {fileID: 1587544296}
+  _winnerText: {fileID: 1862304272}
 --- !u!114 &8465363748144300034
 MonoBehaviour:
   m_ObjectHideFlags: 0
