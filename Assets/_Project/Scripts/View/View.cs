@@ -12,8 +12,8 @@ namespace _Project.Scripts.Views
         {
             Presenter = presenter;
         }
-        
-        public abstract void ShowSpinResult(List<int> state);
-        public abstract void ShowWinnerScreen();
+
+        public abstract void ShowSpinResult(List<int> stateToShow);
+        public abstract void ShowWinnerText();
     }
 }

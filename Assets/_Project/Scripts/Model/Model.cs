@@ -6,31 +6,32 @@ namespace _Project.Scripts.Models
 {
     public abstract class Model
     {
-        protected View View;
-        protected List<int> State;
-        protected bool IsWin;
-        
-        public List<int> CurrentState => State;
+        private List<int> _state;
+        private View _view;
+        private bool _isWin;
+
+        public List<int> CurrentState => _state;
 
         public Model(View view)
         {
-            View = view;
-            State = new int[9].ToList();
+            _state = new int[9].ToList();
+            _view = view;
         }
-
+        
         public void SetState(List<int> state)
         {
-            State = state;
-            View.ShowSpinResult(State);
+            _state = state;
+            
+            _view.ShowSpinResult(_state);
         }
 
-        public void SetStateWin(bool isWin)
+        public void SetWinState(bool isWin)
         {
-            IsWin = isWin;
+            _isWin = isWin;
 
-            if (IsWin)
+            if (_isWin)
             {
-                View.ShowWinnerScreen();
+                _view.ShowWinnerText();
             }
         }
     }

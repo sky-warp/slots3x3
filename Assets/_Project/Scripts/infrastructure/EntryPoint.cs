@@ -3,14 +3,17 @@ using _Project.Scripts.Presenters;
 using _Project.Scripts.Views;
 using UnityEngine;
 
-public class EntryPoint : MonoBehaviour
+namespace _Project.Scripts.infrastructure
 {
-    [SerializeField] private SlotUIView _uiView;
-
-    private void Awake()
+    public class EntryPoint : MonoBehaviour
     {
-        var model = new UnlimitedSpinModel(_uiView);
-        Presenter presenter = new SlotPresenter(model);
-        _uiView.Init(presenter);
+        [SerializeField] private UISlotView _uiSlotView;
+
+        private void Awake()
+        {
+            Model model = new UnlimitedSlotsModel(_uiSlotView);
+            Presenter presenter = new CentralLinePresenter(model);
+            _uiSlotView.Init(presenter);
+        }
     }
 }

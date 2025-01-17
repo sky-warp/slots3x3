@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using _Project.Scripts.Models;
+using UnityEngine;
 
 namespace _Project.Scripts.Presenters
 {
@@ -17,20 +18,21 @@ namespace _Project.Scripts.Presenters
         {
             Spin();
         }
-
-        private void Spin()
+        
+        public void Spin()
         {
-            List<int> tempState = new int[Model.CurrentState.Count].ToList();
+//            List<int> state = new int[Model.CurrentState.Count].ToList();
+            List<int> state = Model.CurrentState;
 
             for (int i = 0; i < Model.CurrentState.Count; i++)
             {
-                tempState[i] = UnityEngine.Random.Range(0, 6);
+                state[i] = Random.Range(0, 6);
             }
             
-            Model.SetState(tempState);
-            Model.SetStateWin(AnalyzeResult());
+            Model.SetState(state);
+            Model.SetWinState(AnalyzeWin(state));
         }
         
-        public abstract bool AnalyzeResult();
+        public abstract bool AnalyzeWin(List<int> stateForAnalize);
     }
 }
